@@ -1,0 +1,26 @@
+[
+    {
+        "id": "CUST-001",
+        "name": "John Doe",
+        "email": "john@example.com",
+        "orders": 1,
+        "totalSpent": 60.00,
+        "dateJoined": "2024-01-15T10:00:00Z"
+    },
+    {
+        "id": "CUST-002",
+        "name": "Jane Smith",
+        "email": "jane@example.com",
+        "orders": 1,
+        "totalSpent": 32.50,
+        "dateJoined": "2024-02-01T12:00:00Z"
+    },
+    {
+        "id": "CUST-003",
+        "name": "Alice Johnson",
+        "email": "alice@example.com",
+        "orders": 1,
+        "totalSpent": 85.00,
+        "dateJoined": "2023-12-20T11:30:00Z"
+    }
+]
