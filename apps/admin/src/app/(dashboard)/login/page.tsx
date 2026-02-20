@@ -18,7 +18,7 @@ export default function AdminLogin() {
         if (username === "suchita" && password === "admin") {
             // Set a cookie (in a real app, use a proper session/token)
             document.cookie = "admin_session=true; path=/; max-age=86400"; // Expires in 1 day
-            router.push("/");
+            router.replace("/");
         } else {
             setError("Invalid credentials");
         }
