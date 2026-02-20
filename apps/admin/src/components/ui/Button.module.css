@@ -1,0 +1,79 @@
+.button {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    /* Pill shape */
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Variants */
+.primary {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+    box-shadow: 0 4px 15px rgba(74, 64, 54, 0.2);
+}
+
+.primary:hover {
+    background-color: var(--accent-gold);
+    color: var(--text-primary);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}
+
+.secondary {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.secondary:hover {
+    background-color: var(--accent-sage);
+    color: white;
+}
+
+.outline {
+    background-color: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-primary);
+}
+
+.outline:hover {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+/* Sizes */
+.sm {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+}
+
+.md {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+}
+
+.lg {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+.glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+}

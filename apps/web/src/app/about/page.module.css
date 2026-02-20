@@ -1,0 +1,83 @@
+.page {
+    padding-top: 100px;
+    min-height: 100vh;
+    background-color: var(--bg-primary);
+}
+
+.header {
+    text-align: center;
+    padding: 4rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: var(--text-primary);
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto 6rem;
+    padding: 0 2rem;
+}
+
+.reverse {
+    flex-direction: column;
+}
+
+.textBlock {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.textBlock p {
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.imageBlock {
+    flex: 1;
+    width: 100%;
+}
+
+.imageWrapper {
+    position: relative;
+    aspect-ratio: 4/3;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.image {
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.imageWrapper:hover .image {
+    transform: scale(1.03);
+}
+
+@media (min-width: 768px) {
+    .section {
+        flex-direction: row;
+        gap: 6rem;
+    }
+
+    .reverse {
+        flex-direction: row-reverse;
+    }
+}
