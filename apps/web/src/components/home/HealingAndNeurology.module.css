@@ -1,0 +1,196 @@
+.section {
+    background: #fff;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 6rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.content {
+    flex: 1;
+}
+
+.label {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.875rem;
+    color: #d4af37;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    line-height: 1.1;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.description {
+    font-size: 1.25rem;
+    color: #4a4a4a;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.description em {
+    color: #1a1a1a;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.serviceCard {
+    padding: 2.5rem;
+    background: #fafaf9;
+    border-radius: 24px;
+    border: 1px solid #f0f0ee;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.serviceCard:hover {
+    background: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+    transform: translateY(-5px);
+    border-color: #d4af37;
+}
+
+.serviceIcon {
+    width: 48px;
+    height: 48px;
+    background: #fff;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.serviceTitle {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.serviceText {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.actions {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.primaryButton {
+    display: inline-block;
+    padding: 1.25rem 3rem;
+    background: #1a1a1a;
+    color: white;
+    font-weight: 600;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.primaryButton:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.secondaryButton {
+    display: inline-block;
+    padding: 1.25rem 3rem;
+    background: transparent;
+    color: #1a1a1a;
+    font-weight: 600;
+    border-radius: 40px;
+    text-decoration: none;
+    border: 1px solid #e5e5e5;
+    transition: all 0.3s ease;
+}
+
+.secondaryButton:hover {
+    background: #fafafa;
+    border-color: #1a1a1a;
+}
+
+.imageContainer {
+    flex: 1;
+    position: relative;
+    height: 800px;
+}
+
+.parallaxWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 300px 300px 0 0;
+    overflow: hidden;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.decoration {
+    position: absolute;
+    bottom: -40px;
+    left: -40px;
+    width: 200px;
+    height: 200px;
+    background: #d4af37;
+    opacity: 0.1;
+    border-radius: 50%;
+    filter: blur(60px);
+}
+
+@media (max-width: 1200px) {
+    .container {
+        flex-direction: column-reverse;
+        gap: 4rem;
+    }
+
+    .imageContainer {
+        height: 600px;
+        width: 100%;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .servicesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .primaryButton,
+    .secondaryButton {
+        text-align: center;
+    }
+}

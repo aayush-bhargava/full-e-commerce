@@ -55,7 +55,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 <div className={styles.info}>
                     <p className={styles.category}>{product.category}</p>
                     <h3 className={styles.name}>{product.name}</h3>
-                    <p className={styles.price}>${product.price.toFixed(2)}</p>
+                    <p className={styles.price}>₹{product.price.toFixed(2)}</p>
                 </div>
             </motion.div>
         </Link>

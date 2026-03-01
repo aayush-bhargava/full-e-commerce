@@ -1,0 +1,107 @@
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+}
+
+.infoCol {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.infoBox {
+    display: flex;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.iconCircle {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #fdfaf3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d4af37;
+    border: 1px solid #f0efeb;
+}
+
+.infoBox h3 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #999;
+    margin-bottom: 0.25rem;
+}
+
+.infoBox p {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputGroup label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #666;
+}
+
+.inputGroup input,
+.inputGroup textarea {
+    padding: 1rem;
+    background: #fcfcfb;
+    border: 1px solid #f0efeb;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.inputGroup input:focus,
+.inputGroup textarea:focus {
+    border-color: #d4af37;
+    outline: none;
+    background: white;
+}
+
+.inputGroup textarea {
+    height: 150px;
+    resize: none;
+}
+
+.submitBtn {
+    height: 56px;
+    background: #111;
+    color: white;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.submitBtn:hover {
+    background: #d4af37;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .contactGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}

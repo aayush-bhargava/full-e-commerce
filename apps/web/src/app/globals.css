@@ -1,43 +1,52 @@
 @import "tailwindcss";
 
 :root {
-  /* Spiritual Palette */
-  --bg-primary: #FDFCF8;
-  /* Off-white / Cream */
-  --bg-secondary: #F4F1EA;
-  /* Light Beige */
-  --text-primary: #4A4036;
-  /* Dark Sandalwood */
-  --text-secondary: #7D7365;
-  /* Muted Earth */
-  --accent-sage: #9CAF88;
-  /* Sage Green */
-  --accent-gold: #D4AF37;
-  /* Subtle Gold */
-  --accent-gold-light: #E5C568;
+  /* Premium Positivity Palette: Pinks & Purples */
+  --bg-primary: #FFF9FA;
+  /* Ultra Light Rose */
+  --bg-secondary: #FAF5FF;
+  /* Ultra Light Lavender */
+  --text-primary: #2D0066;
+  /* Deep Midnight Purple */
+  --text-secondary: #6B4399;
+  /* Muted Royal Purple */
+  --accent-pink: #FF66A1;
+  /* Vibrant Soft Pink */
+  --accent-purple: #9A5CFF;
+  /* Luminous Purple */
+  --accent-gold: #FFD700;
+  /* Pure Gold */
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-blur: blur(12px);
 
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
 
-  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.03);
-  --shadow-glow: 0 0 15px rgba(212, 175, 55, 0.2);
+  --shadow-soft: 0 10px 40px rgba(45, 0, 102, 0.04);
+  --shadow-glow: 0 0 25px rgba(255, 102, 161, 0.15);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-primary: #1C1B18;
-    /* Dark Charcoal */
-    --bg-secondary: #262420;
-    /* Darker Wood */
-    --text-primary: #EAE6DF;
-    /* Light Cream */
-    --text-secondary: #B0A89C;
-    /* Muted Beige */
-    --accent-sage: #8A9E75;
-    --accent-gold: #C5A028;
+    --bg-primary: #0F001A;
+    /* Near Black Purple */
+    --bg-secondary: #1A0033;
+    /* Deep Void Purple */
+    --text-primary: #FFE6F0;
+    /* Softest Pink Text */
+    --text-secondary: #E0C2FF;
+    /* Light Lavender */
+    --accent-pink: #FF4D94;
+    --accent-purple: #B085FF;
 
-    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.2);
-    --shadow-glow: 0 0 15px rgba(212, 175, 55, 0.2);
+    --glass-bg: rgba(26, 0, 51, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.1);
+
+    --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.5);
+    --shadow-glow: 0 0 25px rgba(176, 133, 255, 0.2);
   }
 }
 

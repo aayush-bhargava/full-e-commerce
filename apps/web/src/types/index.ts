@@ -1,3 +1,10 @@
+export interface UserReview {
+    name: string;
+    rating: number;
+    comment: string;
+    date: string;
+}
+
 export interface Product {
     id: string;
     name: string;
@@ -8,4 +15,7 @@ export interface Product {
     benefits: string[];
     chakra: string;
     stock?: number;
+    displayRating?: number;
+    displayReviews?: number;
+    userReviews?: UserReview[];
 }

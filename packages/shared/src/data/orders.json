@@ -1,0 +1,22 @@
+[
+  {
+    "customer": "Aayush Bhargava",
+    "email": "aayushbhargava71@gmail.com",
+    "address": "135, scheme 3, Jaipur",
+    "city": "Alwar",
+    "pincode": "301001",
+    "total": 4500,
+    "status": "Processing",
+    "paymentMethod": "whatsapp",
+    "items": [
+      {
+        "productId": "idflwwf7t",
+        "quantity": 9,
+        "price": 500,
+        "name": "Salt Lamp"
+      }
+    ],
+    "id": "ORD-4713",
+    "date": "2026-03-01T14:13:51.017Z"
+  }
+]

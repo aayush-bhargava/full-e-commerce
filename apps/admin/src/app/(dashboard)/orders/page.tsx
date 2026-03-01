@@ -50,7 +50,7 @@ export default async function OrdersPage() {
                                         </span>
                                     </td>
                                     <td className="px-6 py-4 text-stone-600 font-medium">{order.items.reduce((acc, item) => acc + item.quantity, 0)} items</td>
-                                    <td className="px-6 py-4 text-stone-900 font-bold">${order.total.toFixed(2)}</td>
+                                    <td className="px-6 py-4 text-stone-900 font-bold">₹{order.total.toFixed(2)}</td>
                                     <td className="px-6 py-4 text-right pr-8">
                                         <button className="p-2 text-stone-400 hover:text-stone-900 hover:bg-stone-100 rounded-lg transition-colors opacity-60 group-hover:opacity-100">
                                             <Eye size={18} />

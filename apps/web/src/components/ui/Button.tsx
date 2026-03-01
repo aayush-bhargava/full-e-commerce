@@ -6,7 +6,7 @@ import styles from "./Button.module.css";
 
 interface ButtonProps extends HTMLMotionProps<"button"> {
     variant?: "primary" | "secondary" | "outline";
-    size?: "sm" | "md" | "lg";
+    size?: "sm" | "md" | "lg" | "xl";
     children: React.ReactNode;
 }
 

@@ -1,7 +1,8 @@
 import Hero from "@/components/home/Hero";
 import FeaturedCollections from "@/components/home/FeaturedCollections";
-import SacredRitual from "@/components/home/SacredRitual";
+import HealingAndNeurology from "@/components/home/HealingAndNeurology";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
+import HighlightedProducts from "@/components/home/HighlightedProducts";
 import { getProducts } from "@/lib/db";
 
 export const dynamic = 'force-dynamic';
@@ -13,7 +14,8 @@ export default async function Home() {
     <>
       <Hero />
       <FeaturedProducts products={products} />
-      <SacredRitual />
+      <HighlightedProducts />
+      <HealingAndNeurology />
       <FeaturedCollections />
     </>
   );

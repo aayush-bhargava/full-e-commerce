@@ -7,11 +7,22 @@ import { motion } from "framer-motion";
 import { Product } from "@/types";
 import styles from "./ProductCard.module.css";
 
+import { useCart } from "@/context/CartContext";
+import { Plus } from "lucide-react";
+
 interface ProductCardProps {
     product: Product;
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+    const { addToCart } = useCart();
+
+    const handleAddToCart = (e: React.MouseEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        addToCart(product);
+    };
+
     return (
         <Link href={`/product/${product.id}`}>
             <motion.div
@@ -48,14 +59,23 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                             hover: { opacity: 1 }
                         }}
                     >
-                        <span className={styles.viewText}>View Product</span>
+                        <div className={styles.actions}>
+                            <span className={styles.viewText}>View Product</span>
+                            <button
+                                onClick={handleAddToCart}
+                                className={styles.addToCartBtn}
+                                aria-label="Add to cart"
+                            >
+                                <Plus size={20} />
+                            </button>
+                        </div>
                     </motion.div>
                 </div>
 
                 <div className={styles.info}>
                     <p className={styles.category}>{product.category}</p>
                     <h3 className={styles.name}>{product.name}</h3>
-                    <p className={styles.price}>${product.price.toFixed(2)}</p>
+                    <p className={styles.price}>₹{product.price.toFixed(2)}</p>
                 </div>
             </motion.div>
         </Link>

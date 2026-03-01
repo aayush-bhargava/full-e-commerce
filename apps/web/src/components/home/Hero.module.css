@@ -1,128 +1,105 @@
 .hero {
     position: relative;
     height: 100vh;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background-color: var(--bg-primary);
+    background: var(--bg-primary);
 }
 
-.background {
+.gradientBg {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
+    inset: 0;
+    background: radial-gradient(circle at top right, rgba(255, 102, 161, 0.1), transparent 50%),
+        radial-gradient(circle at bottom left, rgba(154, 92, 255, 0.1), transparent 50%);
+    z-index: 1;
 }
 
-.blob1 {
-    position: absolute;
-    top: -10%;
-    left: -10%;
-    width: 70vw;
-    height: 70vw;
-    background: var(--bg-secondary);
-    border-radius: 50%;
-    filter: blur(80px);
-    animation: float 20s infinite ease-in-out;
-    opacity: 0.6;
-}
-
-.blob2 {
-    position: absolute;
-    bottom: -10%;
-    right: -10%;
-    width: 60vw;
-    height: 60vw;
-    background: radial-gradient(circle, var(--accent-sage) 0%, transparent 70%);
-    border-radius: 50%;
-    filter: blur(100px);
-    animation: float 25s infinite ease-in-out reverse;
-    opacity: 0.4;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(30px);
-    /* Frosted glass effect */
-}
-
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translate(0, 0) scale(1);
-    }
-
-    33% {
-        transform: translate(30px, -50px) scale(1.1);
-    }
-
-    66% {
-        transform: translate(-20px, 20px) scale(0.95);
-    }
+.container {
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 .content {
-    position: relative;
-    z-index: 10;
-    text-align: center;
-    padding: 0 2rem;
     max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.badge {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: var(--accent-pink);
+    text-transform: uppercase;
 }
 
 .title {
     font-family: var(--font-serif);
-    font-size: 3.5rem;
-    /* Fallback */
-    font-size: clamp(3rem, 6vw, 5.5rem);
-    line-height: 1.1;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
+    font-size: clamp(3.5rem, 8vw, 7rem);
+    line-height: 0.95;
     color: var(--text-primary);
+    letter-spacing: -0.04em;
+    font-weight: 700;
 }
 
-.highlight {
-    color: var(--accent-gold);
+.italic {
     font-style: italic;
+    color: var(--accent-purple);
+    font-weight: 500;
 }
 
 .subtitle {
-    font-size: 1.1rem;
-    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
     color: var(--text-secondary);
-    margin-bottom: 2.5rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 650px;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
-.scrollIndicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
+.actions {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 
-.line {
-    width: 1px;
-    height: 40px;
-    background: var(--text-secondary);
-    opacity: 0.5;
+.decorativeElement {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(255, 102, 161, 0.2), rgba(154, 92, 255, 0.2));
+    filter: blur(80px);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 5rem;
+        height: auto;
+        min-height: 90vh;
+    }
+
+    .actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .actions button {
+        width: 100%;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
 }

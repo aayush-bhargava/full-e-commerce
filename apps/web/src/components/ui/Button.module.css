@@ -62,6 +62,11 @@
     font-size: 1.125rem;
 }
 
+.xl {
+    padding: 1.25rem 3.5rem;
+    font-size: 1.25rem;
+}
+
 .content {
     position: relative;
     z-index: 2;

@@ -1,0 +1,30 @@
+.section {
+    margin-bottom: 4rem;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.iconHeading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    color: #d4af37;
+}
+
+.iconHeading h2 {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    color: #1a1a1a;
+}
+
+.section p {
+    color: #555;
+    line-height: 1.8;
+}
+
+.section strong {
+    color: #111;
+}

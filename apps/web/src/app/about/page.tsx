@@ -9,6 +9,7 @@ import styles from "./page.module.css";
 const AboutPage = () => {
     return (
         <div className={styles.page}>
+
             <header className={styles.header}>
                 <motion.h1
                     className={styles.title}
@@ -16,26 +17,29 @@ const AboutPage = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    Our Story
+                    The WELLBEING <span className={styles.italic}>Promise.</span>
                 </motion.h1>
             </header>
 
             <Section className={styles.section}>
                 <div className={styles.textBlock}>
-                    <h2 className={styles.subtitle}>Beginning with Intention</h2>
+                    <h2 className={styles.subtitle}>Science Meets Spirit</h2>
                     <p>
-                        Lumina was born from a desire to connect people with the earth's ancient wisdom.
-                        In a fast-paced world, we believe in slowing down and finding the divine in the everyday.
+
+                        Welcome. I am a Suchita, Clinical Neurologist and <em>Advanced Pranic Healer</em> dedicated to
+                        bridging the gap between modern medical science and ancient energy healing.
                     </p>
                     <p>
-                        Every crystal, mala, and artifact in our collection is hand-selected for its energetic purity and aesthetic beauty.
+                        My journey began learning the new technologies in Pranic Healing in Alwar, Rajasthan, where I studied the intricacies
+                        of the human brain. However, I soon realized that true well-being requires more than just
+                        neurological health—it requires the alignment of the subtle energy bodies.
                     </p>
                 </div>
                 <div className={styles.imageBlock}>
                     <div className={styles.imageWrapper}>
                         <Image
-                            src="https://images.unsplash.com/photo-1518557363403-4f938092fb14?q=80&w=2670&auto=format&fit=crop"
-                            alt="Meditation space"
+                            src="https://images.unsplash.com/photo-1559757175-5700dde675bc?q=80&w=2671&auto=format&fit=crop"
+                            alt="Neurological science"
                             fill
                             className={styles.image}
                         />
@@ -45,17 +49,22 @@ const AboutPage = () => {
 
             <Section className={`${styles.section} ${styles.reverse}`}>
                 <div className={styles.textBlock}>
-                    <h2 className={styles.subtitle}>Conscious Sourcing</h2>
+                    <h2 className={styles.subtitle}>Advanced Pranic Healing</h2>
                     <p>
-                        We work directly with artisans and miners who respect the land and their craft.
-                        Sustainability is not just a buzzword for us; it is a spiritual practice of honoring the interconnectedness of all life.
+                        Pranic Healing is a highly developed and tested system of energy medicine that uses
+                        <em> prana</em> to balance, harmonize and transform the body's energy processes.
+                    </p>
+                    <p>
+                        By combining my knowledge of the nervous system with therapeutic energy work,
+                        I offer a unique synthesis that accelerates recovery, enhances cognitive clarity,
+                        and deepens spiritual connection.
                     </p>
                 </div>
                 <div className={styles.imageBlock}>
                     <div className={styles.imageWrapper}>
                         <Image
-                            src="https://images.unsplash.com/photo-1602737667822-7772c3d0b27b?q=80&w=2669&auto=format&fit=crop"
-                            alt="Artisan crafting"
+                            src="https://images.unsplash.com/photo-1515023115689-589c33041697?q=80&w=2670&auto=format&fit=crop"
+                            alt="Energy healing"
                             fill
                             className={styles.image}
                         />

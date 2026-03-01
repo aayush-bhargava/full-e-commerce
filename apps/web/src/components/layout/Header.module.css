@@ -10,7 +10,7 @@
 }
 
 .scrolled {
-    background: rgba(253, 252, 248, 0.85);
+    background: rgba(255, 245, 247, 0.85);
     /* --bg-primary with opacity */
     backdrop-filter: blur(12px);
     padding: 1rem 0;
@@ -45,6 +45,25 @@
     letter-spacing: 0.1em;
     color: var(--text-primary);
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logoIcon {
+    color: var(--accent-pink);
+}
+
+.logoImageWrapper {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.logoImage {
+    object-fit: contain;
 }
 
 .desktopNav {
@@ -98,7 +117,7 @@
     position: absolute;
     top: -5px;
     right: -8px;
-    background: var(--accent-sage);
+    background: var(--accent-pink);
     color: white;
     font-size: 0.65rem;
     width: 16px;
@@ -146,4 +165,133 @@
     .mobileToggle {
         display: none;
     }
+}
+
+.authSection {
+    display: none;
+    align-items: center;
+}
+
+@media (min-width: 1024px) {
+    .authSection {
+        display: flex;
+    }
+}
+
+.authLinks {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.loginLink {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    transition: color 0.3s ease;
+}
+
+.loginLink:hover {
+    color: var(--text-primary);
+}
+
+.signupBtn {
+    background: var(--text-primary);
+    color: white;
+    padding: 0.6rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.signupBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.userMenuWrapper {
+    position: relative;
+}
+
+.userDropdown {
+    position: absolute;
+    top: calc(100% + 1rem);
+    right: -10px;
+    width: 240px;
+    background: white;
+    padding: 1.25rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f0f0f0;
+    z-index: 100;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.userName {
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
+.userEmail {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 0.2rem;
+}
+
+.dropdownDivider {
+    height: 1px;
+    background: #f5f5f5;
+    margin: 0 -1.25rem 1rem;
+}
+
+.logoutBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 0.5rem;
+    color: #ef4444;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.logoutBtn:hover {
+    background: #fff5f5;
+}
+
+.mobileAuth {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: center;
+}
+
+.mobileAuth a:first-child {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.mobileAuth a:last-child {
+    background: var(--text-primary);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 50px;
+    font-weight: 600;
 }

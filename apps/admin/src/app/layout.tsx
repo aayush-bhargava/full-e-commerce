@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Lumina | Spiritual Artifacts",
+  title: "WELLBEING | ADMIN",
   description: "Align Your Energy. Elevate Your Spirit.",
 };
 

@@ -23,10 +23,10 @@ export default async function ProductsPage() {
 
                 <Link
                     href="/products/new"
-                    className="flex items-center gap-2 bg-stone-900 text-white px-5 py-2.5 rounded-lg hover:bg-stone-800 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"
+                    className="flex items-center gap-2 !bg-stone-900 !text-white px-5 py-2.5 rounded-lg hover:bg-stone-800 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"
                 >
-                    <Plus size={20} />
-                    <span className="font-medium">Add Product</span>
+                    <Plus size={20} className="!text-white" />
+                    <span className="font-medium !text-white">Add Product</span>
                 </Link>
             </div>
 
@@ -93,11 +93,10 @@ export default async function ProductsPage() {
                                     {/* STOCK */}
                                     <td className="px-6 py-4 text-stone-600">
                                         <span
-                                            className={`inline-flex items-center gap-1.5 ${
-                                                (product.stock || 0) < 10
+                                            className={`inline-flex items-center gap-1.5 ${(product.stock || 0) < 10
                                                     ? 'text-orange-600 font-medium'
                                                     : ''
-                                            }`}
+                                                }`}
                                         >
                                             {product.stock || 0}
                                             {(product.stock || 0) < 10 && (
@@ -109,10 +108,12 @@ export default async function ProductsPage() {
                                     {/* ACTIONS */}
                                     <td className="px-6 py-4 text-right">
                                         <div className="flex items-center justify-end gap-2 opacity-60 group-hover:opacity-100 transition-opacity">
-                                            <button className="p-2 text-stone-400 hover:text-stone-900 hover:bg-stone-100 rounded-lg transition-colors">
+                                            <Link
+                                                href={`/products/${product.id}/edit`}
+                                                className="p-2 text-stone-400 hover:text-stone-900 hover:bg-stone-100 rounded-lg transition-colors"
+                                            >
                                                 <Edit size={18} />
-                                            </button>
-
+                                            </Link>
                                             <form action={handleDelete}>
                                                 <input
                                                     type="hidden"

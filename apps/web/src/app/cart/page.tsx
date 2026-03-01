@@ -34,7 +34,7 @@ const CartPage = () => {
     return (
         <div className={styles.page}>
             <div className={styles.container}>
-                <h1 className={styles.title}>Your Sanctuary</h1>
+                <h1 className={styles.title}>Your Shop</h1>
 
                 <div className={styles.content}>
                     <div className={styles.items}>
@@ -53,7 +53,7 @@ const CartPage = () => {
                                     </div>
                                     <div className={styles.itemDetails}>
                                         <h3 className={styles.itemName}>{item.name}</h3>
-                                        <p className={styles.itemPrice}>${item.price.toFixed(2)}</p>
+                                        <p className={styles.itemPrice}>₹{item.price.toFixed(2)}</p>
                                         <div className={styles.quantityControls}>
                                             <button className={styles.control}>-</button>
                                             <span>{item.quantity}</span>
@@ -75,15 +75,15 @@ const CartPage = () => {
                         <h2 className={styles.summaryTitle}>Summary</h2>
                         <div className={styles.summaryRow}>
                             <span>Subtotal</span>
-                            <span>${subtotal.toFixed(2)}</span>
+                            <span>₹{subtotal.toFixed(2)}</span>
                         </div>
                         <div className={styles.summaryRow}>
                             <span>Shipping</span>
-                            <span>{shipping === 0 ? "Free" : `$${shipping.toFixed(2)}`}</span>
+                            <span>{shipping === 0 ? "Free" : `₹${shipping.toFixed(2)}`}</span>
                         </div>
                         <div className={`${styles.summaryRow} ${styles.total}`}>
                             <span>Total</span>
-                            <span>${total.toFixed(2)}</span>
+                            <span>₹{total.toFixed(2)}</span>
                         </div>
                         <Button size="lg" className={styles.checkoutBtn}>Proceed to Checkout</Button>
                     </div>

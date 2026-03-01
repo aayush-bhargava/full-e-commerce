@@ -35,7 +35,7 @@ export default async function CustomersPage() {
                                             {customer.orders} orders
                                         </span>
                                     </td>
-                                    <td className="px-6 py-4 text-stone-900 font-bold">${customer.totalSpent.toFixed(2)}</td>
+                                    <td className="px-6 py-4 text-stone-900 font-bold">₹{customer.totalSpent.toFixed(2)}</td>
                                     <td className="px-6 py-4 text-right pr-8">
                                         <a
                                             href={`mailto:${customer.email}`}

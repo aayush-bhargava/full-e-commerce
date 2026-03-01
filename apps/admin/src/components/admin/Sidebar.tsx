@@ -2,12 +2,13 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, ShoppingBag, Users, ShoppingCart, LogOut } from 'lucide-react';
+import { LayoutDashboard, ShoppingBag, Users, ShoppingCart, LogOut, Layers } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const menuItems = [
     { icon: LayoutDashboard, label: 'Dashboard', href: '/' },
     { icon: ShoppingBag, label: 'Products', href: '/products' },
+    { icon: Layers, label: 'Collections', href: '/collections' },
     { icon: ShoppingCart, label: 'Orders', href: '/orders' },
     { icon: Users, label: 'Customers', href: '/customers' },
 ];
@@ -27,7 +28,7 @@ export default function Sidebar() {
                     <div className="w-8 h-8 bg-stone-100 rounded-lg flex items-center justify-center shadow-[0_0_15px_rgba(255,255,255,0.2)]">
                         <span className="text-stone-900 font-bold font-serif">W</span>
                     </div>
-                    <h1 className="text-xl font-serif text-stone-100 tracking-wide">WellBeing Admin</h1>
+                    <h1 className="text-xl font-serif text-stone-100 tracking-wide">Suchita Bhargava</h1>
                 </div>
             </div>
 
